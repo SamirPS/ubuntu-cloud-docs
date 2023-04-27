@@ -87,9 +87,9 @@ placeholder credentials with your own in the "variables" section):
         {
             "type": "shell",
             "inline": [
-            "sudo ua attach {{user `ua_token`}}",
-            "sudo ua status --wait",
-            "sudo ua enable fips --assume-yes"
+            "sudo pro attach {{user `ua_token`}}",
+            "sudo pro status --wait",
+            "sudo pro enable fips --assume-yes"
             ]
         },
         {
@@ -263,7 +263,7 @@ To ensure your nodes have an Ubuntu Pro subscription, SSH into one of the cluste
 
     $ # Replace the private SSH key and node IP according to your setup
     $ ssh -i yoursshkeyname.pem ubuntu@<external_ip_of_node>
-    $ ua status
+    $ pro status
 
     SERVICE          ENTITLED  STATUS    DESCRIPTION
     esm-apps         yes       enabled   Expanded Security Maintenance for Applications
@@ -282,4 +282,4 @@ You now have an Ubuntu Pro Kubernetes cluster on EKS. Your Ubuntu Pro subscripti
 
 ..  code-block:: bash
 
-    $ ua status
+    $ pro status
